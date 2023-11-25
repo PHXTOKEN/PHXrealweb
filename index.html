@@ -7157,7 +7157,7 @@
 																</div>
 
 
-
+                                                                  
 
 
 																<!-- Network Selection Popup -->
@@ -7623,7 +7623,9 @@
 														crypto venture but a long-term quest to craft a meme empire,
 														offering a space where creativity, humor, and financial
 														aspirations flourish together.
+													</p>
 
+													<script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/coinMarquee.js"></script><div id="coinmarketcap-widget-marquee" coins="1,1027,825,1839,74" currency="USD" theme="dark" transparent="true" show-symbol-logo="true"></div>   
 
 													</p>
 												</div>
@@ -8677,6 +8679,7 @@
 					</div>
 				</div>
 
+				
 
 				<div class="footer-bottom">
 
@@ -9157,25 +9160,26 @@
 					$(".connect-wallet-container").html(
 						'<button class="buying-button eth-button">Buy with ETH</button>'
 					);
-					$(".bnb-logo").hide();
+					$(".bnb-logo").show();
 					$(".eth-logo").show();
 				} else if (network === "bsc") {
 					$(".connect-wallet-container").html(
 						'<button class="buying-button bnb-button">Buy with BNB</button>'
 					);
 					$(".bnb-logo").show();
-					$(".eth-logo").hide();
+					$(".eth-logo").show();
 				}
 				showDisconnectButton();
 			}
 
 			// Hide the ETH logo initially
-			$(".eth-logo").hide();
+			$(".eth-logo").show();
+			$(".bnb-logo").show();
 
 
 			window.addEthInputEventListener = function (currency, ethPrice, bnbPrice) {
-				const shakitaPerEth = 16500000000000;
-				const shakitaPerBnb = 16500000000000;
+				const shakitaPerEth = 1990000000;
+				const shakitaPerBnb = 1990000000;
 
 				$("#eth-input").on("input", function () {
 					const inputAmount = parseFloat(this.value);
@@ -9206,7 +9210,7 @@
 						if (!isNaN(inputAmount) && inputAmount > 0) {
 							if (inputAmount < 0.01) {
 								// Display error in your UI
-								document.getElementById("error-message").innerText = `Minimum purchase is 0.01 ${currency}`;
+								document.getElementById("error-message").innerText = `Minimum purchase is 0.001 ${currency}`;
 								return;
 							}
 							// Show the transaction pending popup
