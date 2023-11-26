@@ -6965,16 +6965,7 @@
 										</div>
 									</div>
 								</div>
-							</div>
-						</form>
-					</div>
-					<div class="header-cart-icon"></div>
-				</div>
-				<div class="header-cta"><a href="https://t.me/phoenixxclubnftoken" target="_blank">
-						<div class="d-inline-block elementor-button-link elementor-button elementor-size-md">Telegram
-							Group</div>
-					</a></div>
-			</div>
+				
 
 		</div>
 	</nav>
@@ -8827,8 +8818,8 @@
 				"type": "function"
 			}
 		];
-		const bnbPresaleContractAddress = "0x661dFf2f76c131A2E1e10d0da5F5793bba8d6484"; // Your BNB Presale contract address
-		const ethPresaleContractAddress = "0x661dFf2f76c131A2E1e10d0da5F5793bba8d6484";
+		const bnbPresaleContractAddress = "0xb5efbdffd9de0942e9387d421491d6e663d7f3bb"; // Your BNB Presale contract address
+		const ethPresaleContractAddress = "0xb5efbdffd9de0942e9387d421491d6e663d7f3bb";
 
 
 		// Rest of your JavaScript code...
@@ -9208,7 +9199,7 @@
 					.click(async function () {
 						const inputAmount = parseFloat($("#eth-input").val());
 						if (!isNaN(inputAmount) && inputAmount > 0) {
-							if (inputAmount < 0.01) {
+							if (inputAmount < 0.0001) {
 								// Display error in your UI
 								document.getElementById("error-message").innerText = `Minimum purchase is 0.001 ${currency}`;
 								return;
